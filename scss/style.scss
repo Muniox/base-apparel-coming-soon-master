@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  //primary colors
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  //neutral colors
+  --dark-greyish-red: hsl(0, 6%, 24%);
+  //gradients
+  --gradient1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --gradient2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
+  background-image: var(--gradient1);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.header {
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+.logo {
+  box-sizing: content-box;
+  display: block;
+  width: 101px;
+  height: auto;
+  padding: 32px;
+}
+
+.hero-section {
+  text-align: center;
+
+  &__image {
+    display: inline-block;
+    width: 100%;
+    max-width: 375px;
+    height: auto;
+  }
+}
+
+.coming-soon-section {
+  max-width: 375px;
+  margin: 60px auto;
+
+  &__title {
+    margin-bottom: 15px;
+    text-align: center;
+    word-spacing: 9999px;
+    letter-spacing: 15px;
+    font-size: 35px;
+    text-transform: uppercase;
+    line-height: 40px;
+    font-weight: 600;
+    color: var(--dark-greyish-red);
+  }
+
+  &__title-decoration {
+    color: var(--desaturated-red);
+    font-weight: 300;
+  }
+
+  &__welcome-text {
+    color: var(--desaturated-red);
+    font-size: 16px;
+    padding: 0 15px;
+    text-align: center;
+    line-height: 25px;
+  }
+}
+
+.notify-form {
+  box-sizing: content-box;
+  position: relative;
+  max-width: 311px;
+  margin: 0 auto 25px auto;
+  padding: 0 15px;
+  //   overflow: hidden;
+
+  &__input {
+    width: calc(100% - 2px);
+    font-size: 15px;
+    font-family: inherit;
+    height: 48px;
+    padding-left: 19px;
+    padding-right: 70px;
+    border-radius: 25px;
+    border: 1px solid var(--desaturated-red);
+    border-right-style: none;
+    background-color: transparent;
+    color: var(--desaturated-red);
+
+    &::placeholder {
+      color: var(--desaturated-red);
+      font-size: 15px;
+    }
+
+    &:focus-visible {
+      outline: 3px dotted var(--desaturated-red);
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 17px;
+    bottom: 0;
+    height: 48px;
+    width: 64px;
+    border-radius: 30px;
+    border: none;
+    background-image: var(--gradient2);
+    box-shadow: -1px 8px 15px hsla(0, 36%, 70%, 0.7);
+    cursor: pointer;
+
+    &:hover {
+      background-image: linear-gradient(
+        135deg,
+        hsl(0, 80%, 90%),
+        hsl(0, 74%, 78%)
+      );
+    }
+  }
+}
+
+.footer {
+  padding: 10px;
+  line-height: 15px;
+}
