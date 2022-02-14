@@ -15,7 +15,7 @@
 
 body {
   min-height: 100vh;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   background-image: var(--gradient1);
 }
 
@@ -174,9 +174,22 @@ body {
 }
 
 @media screen and (min-width: 1000px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    background-image: none;
+  }
+  header {
+    margin: 0 auto;
+  }
   .container {
-    -ms-grid-columns: 50% 50%;
-        grid-template-columns: 50% 50%;
+    -ms-grid-columns: minmax(57.349%, 810px) minmax(42.361%, 630px);
+        grid-template-columns: minmax(57.349%, 810px) minmax(42.361%, 630px);
     -ms-grid-rows: min-content min-content min-content;
         grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
         grid-template-rows: min-content min-content min-content;
@@ -186,7 +199,13 @@ body {
             justify-content: center;
     -ms-flex-line-pack: center;
         align-content: center;
-    margin: 0 auto;
+    background-image: url(../images/bg-pattern-desktop.svg), var(--gradient1);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 60% 100%;
+    min-height: unset;
+    align-content: center;
+    justify-content: center;
   }
   .header {
     -webkit-box-ordinal-group: 2;
@@ -232,6 +251,7 @@ body {
     width: 100%;
     height: auto;
     max-height: 100vh;
+    min-height: 600px;
   }
 }
 /*# sourceMappingURL=style.css.map */
