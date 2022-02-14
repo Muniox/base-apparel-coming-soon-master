@@ -17,8 +17,15 @@
 
 body {
   min-height: 100vh;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   background-image: var(--gradient1);
+}
+
+.container {
+  display: grid;
+  // grid-template-columns: minmax(375px, 375px);
+  grid-template-rows: repeat(auto-fit, minmax(1fr, 1fr));
+  min-height: 100vh;
 }
 
 .attribution {
@@ -31,7 +38,7 @@ body {
 
 .header {
   max-width: 375px;
-  margin: 0 auto;
+  // margin: 0 auto;
 }
 
 .logo {
@@ -45,17 +52,23 @@ body {
 .hero-section {
   text-align: center;
 
-  &__image {
+  &__image-mobile {
     display: inline-block;
     width: 100%;
     max-width: 375px;
+    height: auto;
+  }
+
+  &__image-desktop {
+    display: none;
+    width: 100%;
     height: auto;
   }
 }
 
 .coming-soon-section {
   max-width: 375px;
-  margin: 60px auto;
+  margin: 60px auto 0 auto;
 
   &__title {
     margin-bottom: 15px;
@@ -81,17 +94,17 @@ body {
     text-align: center;
     line-height: 25px;
   }
-}
 
-.notify-form {
-  box-sizing: content-box;
-  position: relative;
-  max-width: 311px;
-  margin: 0 auto 25px auto;
-  padding: 0 15px;
-  //   overflow: hidden;
+  &__notify-form {
+    box-sizing: content-box;
+    position: relative;
+    max-width: 311px;
+    margin: 60px auto 25px auto;
+    padding: 0 15px;
+    //   overflow: hidden;
+  }
 
-  &__input {
+  &__notify-input {
     width: calc(100% - 2px);
     font-size: 15px;
     font-family: inherit;
@@ -114,7 +127,7 @@ body {
     }
   }
 
-  &__button {
+  &__notify-button {
     position: absolute;
     right: 17px;
     bottom: 0;
@@ -139,4 +152,56 @@ body {
 .footer {
   padding: 10px;
   line-height: 15px;
+}
+
+@media screen and (min-width: 375px) and (max-width: 1000px) {
+  .header {
+    width: 375px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    grid-template-columns: 50% 50%;
+    // grid-template-rows: 86px 428px 35px;
+    grid-template-rows: min-content min-content min-content;
+    max-width: 1440px;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+  }
+
+  .header {
+    order: 1;
+    grid-column: 1/2;
+  }
+
+  .main-content {
+    order: 2;
+    grid-column: 1/2;
+  }
+
+  .footer {
+    order: 3;
+    grid-column: 1/2;
+  }
+
+  .hero-section {
+    text-align: center;
+    order: 4;
+    grid-row: 1 / span 3;
+    grid-column: 2/3;
+
+    &__image-mobile {
+      display: none;
+    }
+
+    &__image-desktop {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 100vh;
+    }
+  }
 }

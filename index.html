@@ -21,43 +21,58 @@
     <title>Frontend Mentor | Base Apparel coming soon page</title>
   </head>
   <body>
-    <header class="header">
-      <img class="logo" src="./images/logo.svg" alt="Base Apparel" />
-    </header>
-    <div class="hero-section">
-      <img class="hero-section__image" src="./images/hero-mobile.jpg" alt="" />
-    </div>
-    <main class="container">
-      <section class="coming-soon-section">
-        <h1 class="coming-soon-section__title">
-          <span class="coming-soon-section__title-decoration">We're</span>
-          coming soon
-        </h1>
-        <p class="coming-soon-section__welcome-text">
-          Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our
-          launch deals.
-        </p>
-      </section>
-      <form action="" class="notify-form">
-        <input
-          class="notify-form__input"
-          type="text"
-          placeholder="Email Address"
+    <div class="container">
+      <header class="header">
+        <img class="logo" src="./images/logo.svg" alt="Base Apparel" />
+      </header>
+      <div class="hero-section">
+        <img
+          class="hero-section__image-mobile"
+          src="./images/hero-mobile.jpg"
+          alt="pretty girl mobile version"
         />
-        <button class="notify-form__button">
-          <img src="./images/icon-arrow.svg" alt="" />
-        </button>
-      </form>
-    </main>
+        <img
+          class="hero-section__image-desktop"
+          src="./images/hero-desktop.jpg"
+          alt="pretty girl desktop version"
+        />
+      </div>
+      <main class="main-content">
+        <section class="coming-soon-section">
+          <h1 class="coming-soon-section__title">
+            <span class="coming-soon-section__title-decoration">We're</span>
+            coming soon
+          </h1>
+          <p class="coming-soon-section__welcome-text">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+          <form action="" class="coming-soon-section__notify-form">
+            <input
+              class="coming-soon-section__notify-input"
+              type="text"
+              placeholder="Email Address"
+            />
+            <button
+              type="submit"
+              aria-label="icon-arrow"
+              class="coming-soon-section__notify-button"
+            >
+              <img src="./images/icon-arrow.svg" alt="" />
+            </button>
+          </form>
+        </section>
+      </main>
 
-    <footer class="footer">
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="https://github.com/Muniox">Muniox</a>.
-      </p>
-    </footer>
+      <footer class="footer">
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="https://github.com/Muniox">Muniox</a>.
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
