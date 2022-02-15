@@ -17,7 +17,7 @@
 
 body {
   min-height: 100vh;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   background-image: var(--gradient1);
 }
 
@@ -44,7 +44,7 @@ body {
 .logo {
   box-sizing: content-box;
   display: block;
-  width: 101px;
+  max-width: 101px;
   height: auto;
   padding: 32px;
 }
@@ -131,7 +131,7 @@ body {
     position: absolute;
     right: 17px;
     bottom: 0;
-    height: 48px;
+    min-height: 48px;
     width: 64px;
     border-radius: 30px;
     border: none;
@@ -161,43 +161,42 @@ body {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1001px) {
   body {
     display: grid;
     justify-content: center;
     align-content: center;
     background-image: none;
-    // background-image: linear-gradient(
-    //   100deg,
-    //   hsl(0, 100%, 96%) 10%,
-    //   hsl(0, 0%, 100%) 35%
-    // );
-    // background-color: rgb(241, 234, 234);
-  }
-  header {
-    margin: 0 auto;
   }
 
   .container {
-    // grid-template-columns: 57.349% 42.361%;
-    grid-template-columns: minmax(57.349%, 810px) minmax(42.361%, 630px);
+    grid-template-columns: minmax(57.638%, 830px) minmax(42.361%, 610px);
     grid-template-rows: min-content min-content min-content;
     max-width: 1440px;
+    max-height: 800px;
     justify-content: center;
     align-content: center;
-    // margin: 0 auto;
     background-image: url(../images/bg-pattern-desktop.svg), var(--gradient1);
     background-repeat: no-repeat;
     background-position: left;
-    background-size: 60% 100%;
+    background-size: 57.638% 100%;
     min-height: unset;
-    align-content: center;
-    justify-content: center;
   }
 
   .header {
     order: 1;
     grid-column: 1/2;
+    max-width: 460px;
+    // max-width: unset;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .logo {
+    max-width: 160px;
+    padding-left: 0;
+    // padding-left: 65px;
+    padding-top: 65px;
   }
 
   .main-content {
@@ -205,9 +204,50 @@ body {
     grid-column: 1/2;
   }
 
+  .coming-soon-section {
+    max-width: 460px;
+    margin-top: 15px;
+
+    &__title {
+      text-align: left;
+      font-size: 55px;
+      line-height: 65px;
+    }
+
+    &__welcome-text {
+      padding: 0 15px 0 0;
+      text-align: left;
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+    &__notify-form {
+      box-sizing: content-box;
+      position: relative;
+      max-width: 445px;
+      margin: 60px 0 5px 0;
+      padding: 0 15px 0 0;
+    }
+
+    &__notify-input {
+      min-height: 56px;
+      border-radius: 50px;
+    }
+
+    &__notify-button {
+      min-height: 56px;
+      width: 100px;
+      border-radius: 50px;
+    }
+  }
+
   .footer {
     order: 3;
     grid-column: 1/2;
+    text-align: left;
+    width: 100%;
+    margin: unset;
+    padding: 0;
   }
 
   .hero-section {
