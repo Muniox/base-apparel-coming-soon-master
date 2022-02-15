@@ -23,7 +23,6 @@ body {
 
 .container {
   display: grid;
-  // grid-template-columns: minmax(375px, 375px);
   grid-template-rows: repeat(auto-fit, minmax(1fr, 1fr));
   min-height: 100vh;
 }
@@ -68,7 +67,7 @@ body {
 
 .coming-soon-section {
   max-width: 375px;
-  margin: 60px auto 0 auto;
+  margin: 60px auto 10px auto;
 
   &__title {
     margin-bottom: 15px;
@@ -101,7 +100,6 @@ body {
     max-width: 311px;
     margin: 60px auto 25px auto;
     padding: 0 15px;
-    //   overflow: hidden;
   }
 
   &__notify-input {
@@ -172,8 +170,6 @@ body {
   .container {
     grid-template-columns: minmax(57.638%, 830px) minmax(42.361%, 610px);
     grid-template-rows: min-content min-content min-content;
-    max-width: 1440px;
-    max-height: 800px;
     justify-content: center;
     align-content: center;
     background-image: url(../images/bg-pattern-desktop.svg), var(--gradient1);
@@ -187,7 +183,6 @@ body {
     order: 1;
     grid-column: 1/2;
     max-width: 460px;
-    // max-width: unset;
     margin: 0 auto;
     width: 100%;
   }
@@ -195,7 +190,6 @@ body {
   .logo {
     max-width: 160px;
     padding-left: 0;
-    // padding-left: 65px;
     padding-top: 65px;
   }
 

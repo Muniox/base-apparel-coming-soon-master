@@ -68,7 +68,7 @@ body {
 
 .coming-soon-section {
   max-width: 375px;
-  margin: 60px auto 0 auto;
+  margin: 60px auto 10px auto;
 }
 
 .coming-soon-section__title {
@@ -190,8 +190,6 @@ body {
     -ms-grid-rows: min-content min-content min-content;
         grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
         grid-template-rows: min-content min-content min-content;
-    max-width: 1440px;
-    max-height: 800px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
